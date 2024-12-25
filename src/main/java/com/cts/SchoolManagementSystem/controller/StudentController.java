@@ -82,7 +82,7 @@ public class StudentController {
         List<Student> student= studentService.findStudentByFirstName(firstName);
         if(student.isEmpty())
         {
-            log.error("Student with provided name:"+firstName+" not found");
+            log.error("Student with provided First name:"+firstName+" not found");
             throw new StudentNotFoundException("Student with provided name not found");
         }
         log.info("Student with first Name: "+firstName+" is found.");

@@ -9,7 +9,9 @@ import com.cts.SchoolManagementSystem.dto.ParentsSaveDTO;
 import com.cts.SchoolManagementSystem.entity.Parents;
 import com.cts.SchoolManagementSystem.exception.ParentsNotFoundException;
 import com.cts.SchoolManagementSystem.repository.ParentRepository;
+import lombok.Builder;
 
+@Builder
 @Service
 public class ParentsService {
 
@@ -42,7 +44,6 @@ public class ParentsService {
     }
 
     public void deleteParentById(Long id) {
-
         parentRepository.deleteById(id);
     }
 
